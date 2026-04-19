@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Submit Project Form</h2>
+        <form action="submit_project.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Project Title" required>
+            <textarea name="abstract" rows="4" placeholder="Abstract" required></textarea>
+            <input type="text" name="techStack" placeholder="Tech Stack" required>
+            <input type="text" name="researchArea" placeholder="Research Area" required>
+            
+            <label style="display:block; text-align:left; margin-top:10px; color:#555;">Attach Document (PDF or DOCX):</label>
+            <input type="file" name="projectDoc" accept=".pdf, .docx" required>
+            
+            <button type="submit">Submit</button>
+            <button type="button" class="btn-danger" onclick="window.location.href='student_dashboard.html'">Back to Dashboard</button>
+        </form>
+    </div>
+</body>
+</html>
